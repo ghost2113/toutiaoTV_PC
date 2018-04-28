@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <meta name="keywords" content="头条TV 下载 看新闻赚钱" />
     <meta name="description" content="7×24小时不间断更新，为你带来新闻现场一手资讯；重大、突发新闻推送，30秒到你手中" />
-    <title>头条TV官网</title>
+    <title>头条TV</title>
     <link rel="shortcut icon" href="./img/favicon.ico"/>
     <link rel="bookmark" href="./img/favicon.ico"/>
     <link rel="stylesheet" href="./css/animate.css" >
@@ -28,7 +28,7 @@
     <li class="nav_item"><a href="#page5"></a></li>
 </ul>
     <section id="container">
-
+        <!--page1-->
         <div class="page1" name="page1">
             <div class="wrap">
                 <div class="boxR">
@@ -45,6 +45,7 @@
                 </div>
             </div>
         </div>
+        <!--page2-->
         <div class="page2" name="page2">
             <div class="wrap">
                 <h1 class="wow slideInUp" data-wow-duration="1s" >头条TV是什么？</h1>
@@ -56,6 +57,7 @@
             <!--<div class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s" style="width:200px;height:200px;background:white;"></div>
             <div class="wow slideInRight" data-wow-duration="2s" data-wow-delay="1s"  data-wow-iteration="2"  style="width:200px;height:200px;background:black;"></div>-->
         </div>
+        <!--page3-->
         <div class="page3"  name="page3">
             <div class="wrap">
                 <div class="boxL" >
@@ -69,6 +71,7 @@
                 </div>
             </div>
         </div>
+        <!--page4-->
         <div class="page4"  name="page4">
             <div class="wrap">
                 <div class="boxL">
@@ -82,6 +85,7 @@
                 </div>
             </div>
         </div>
+        <!--page5-->
         <div class="page5"  name="page5">
             <div class="wrap">
                 <div class="boxL">
@@ -95,15 +99,16 @@
                 </div>
             </div>
         </div>
+        <!--footer-->
         <div class="footer">
             <div class="link">
                 <a href="#page5">联系我们</a>
                 <span></span>
                 <a href="./agreement.html">用户协议</a>
                 <span></span>
-                <a href="https://zhishun520.com/toutiaoTV/indexMiddle.html">手机版</a>
+                <a href="http://hzmiaokun.com:8081/toutiaoTV/indexMiddle.html">手机版</a>
             </div>
-            <p>沪ICP备 16007154号</p>
+            <p>浙ICP备18011513号-1</p>
         </div>
     </section>
     <script type="text/javascript">
@@ -132,9 +137,9 @@
                 console.log("运行环境为PC浏览器");
                 /*window.location.href="https://zhishun520.com/toutiaoTV/index.html";*/
             }else{
-                window.location.href="https://zhishun520.com/toutiaoTV/indexMiddle.html";
+                window.location.href="http://hzmiaokun.com:8081/toutiaoTV/indexMiddle.html";
             }
-        }
+        };
         browserRedirect();
         /**
          * 侧边导航
@@ -146,6 +151,7 @@
             console.log(index);
             $(window).off("scroll",navStyle);
             $("html,body").animate({"scrollTop": $(".page"+(index+1)).offset().top},function(){
+                $(window).scrollTop($(".page"+(index+1)).offset().top);
                 $(window).on("scroll",navStyle);
             });
         });
